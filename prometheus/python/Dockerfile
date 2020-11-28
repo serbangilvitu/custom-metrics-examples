@@ -1,4 +1,9 @@
 FROM python:alpine
+
+RUN adduser -S -g example example
+
+USER example
+
 WORKDIR /app
 COPY main.py /app
 COPY requirements.txt /app
